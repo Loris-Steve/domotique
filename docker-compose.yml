@@ -1,0 +1,30 @@
+services:
+  broker:
+    image: eclipse-mosquitto
+    container_name: broker
+    ports:
+      - "1883:1883/tcp"
+    volumes: 
+#      - /* your absolut path + :/mosquitto*/ (exemple : C:\_Users_\_documents_\mosquitto:/mosquitto)
+    networks:
+      - sweet-home
+
+  telemetry:
+    build: ./publisher
+    depends_on: 
+      - broker
+    container_name: telemetry
+    networks:
+      - sweet-home
+
+  alerts:
+    build: ./alerts
+    depends_on: 
+      - broker
+    container_name: alerts
+    networks:
+      - sweet-home
+
+networks:
+  sweet-home:
+    external: true

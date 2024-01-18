@@ -1,0 +1,176 @@
+<p>dashboard works!</p>
+
+<div class="p-4">
+    <div class="d-flex flex-wrap">
+        <div class="col-12">
+            <div class="p-2"><button class="btn btn-primary" (click)="getNewMessage()">Connexion au serveur</button></div>
+            <div class="alert alert-danger" role="alert">
+                alert : {{alert}}
+            </div>
+        </div>
+        
+        @for (telemetry of telemetries; track telemetry.deviceName) {
+            @switch (telemetry.deviceName) {
+                @case ("Temp Chambre1") {
+                    <div class="p-2 device-container">
+                        <div class="card bg-orange shadow w-100 p-2">
+                            <div class="row">
+                                
+                                <div class="col-6 d-flex justify-content-center align-items-center">
+                                    <div >
+                                        <mat-icon class="customIconSize">device_thermostat</mat-icon>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <p>{{telemetry.value}}</p>
+                                    <p>{{telemetry.deviceName}}</p>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                }
+                @case ("Temp Chambre2") {
+                    <div class="p-2 device-container">
+                        <div class="card bg-red shadow w-100 p-2">
+                            <div class="row">
+                                
+                                <div class="col-6 d-flex justify-content-center align-items-center">
+                                    <div >
+                                        <mat-icon class="customIconSize">device_thermostat</mat-icon>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <p>{{telemetry.value}}</p>
+                                    <p>{{telemetry.deviceName}}</p>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                }
+                @case ("Humid Chambre1") {
+                    <div class="p-2 device-container">
+                        <div class="card bg-red shadow w-100 p-2">
+                            <div class="row">
+                                
+                                <div class="col-6 d-flex justify-content-center align-items-center">
+                                    <div >
+                                        <mat-icon class="customIconSize">local_drink</mat-icon>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <p>{{telemetry.value}}</p>
+                                    <p>{{telemetry.deviceName}}</p>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                }
+                @case ("Humid Chambre2") {
+                    <div class="p-2 device-container">
+                        <div class="card bg-red shadow w-100 p-2">
+                            <div class="row">
+                                
+                                <div class="col-6 d-flex justify-content-center align-items-center">
+                                    <div >
+                                        <mat-icon class="customIconSize">local_drink</mat-icon>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <p>{{telemetry.value}}</p>
+                                    <p>{{telemetry.deviceName}}</p>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                }
+                @case ("Lum Garage") {
+                    <div class="p-2 device-container">
+                        <div class="card bg-red shadow w-100 p-2">
+                            <div class="row">
+                                
+                                <div class="col-6 d-flex justify-content-center align-items-center">
+
+                                    <div >
+                                        <mat-icon class="customIconSize">highlight</mat-icon>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <p>{{telemetry.value}}</p>
+                                    <p>{{telemetry.deviceName}}</p>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                }
+                @case ("Fen Chambre1") {
+                    <div class="p-2 device-container">
+                        <div class="card bg-red shadow w-100 p-2">
+                            <div class="row">
+                                
+                                <div class="col-6 d-flex justify-content-center align-items-center">
+                                    <div >
+                                        <mat-icon class="customIconSize">featured_video</mat-icon>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <p>{{telemetry.value}}</p>
+                                    <p>{{telemetry.deviceName}}</p>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                }
+                @case ("Fen Chambre2") {
+                    <div class="p-2 device-container">
+                        <div class="card bg-red shadow w-100 p-2">
+                            <div class="row">
+                                
+                                <div class="col-6 d-flex justify-content-center align-items-center">
+                                    <div >
+                                        <mat-icon class="customIconSize">featured_video</mat-icon>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <p>{{telemetry.value}}</p>
+                                    <p>{{telemetry.deviceName}}</p>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                }
+                @default {
+                    <p>Not find</p>
+                }
+            }
+        } @empty {
+           <p>  Liste vide </p>
+          }
+
+    </div>
+</div>
+
+<!-- <div class="d-flex flex-wrap">
+    <tr *ngFor="let telemetry of telemtries">
+        <td>{{ telemetry.value }}</td>
+        <td>{{ telemetry.value }}</td>
+        <td>{{ telemetry.value }}</td>
+        <td>{{ telemetry.value }}</td>
+        <td>{{ telemetry.value }}</td>
+      </tr>
+    
+
+</div> -->

@@ -1,0 +1,38 @@
+
+.device-container {
+    width: 25%;
+    padding: 10px;
+}
+
+.bg-red {
+    background-image: linear-gradient(to bottom right, #FF512F, #DD2476);
+}
+.bg-pink {
+    background-image: linear-gradient(to bottom right, #FF61D2, #FE9090);
+}
+.bg-green {
+    background-image: linear-gradient(to bottom right, #72FFB6, #10D164);
+}
+.bg-orange {
+    background-image: linear-gradient(to bottom right, #FD8451, #FFBD6F);
+}
+.bg-blue {
+    background-image: linear-gradient(to bottom right, #00C0FF, #4218B8);
+}
+
+p {
+    font-weight: bold;
+    color: white;
+}
+
+.mat-icon {
+    font-size: 50px;
+    height: 50px ;
+    width: 50px;
+}
+.customIconSize {
+    font-size: 50px;
+    height: 50px ;
+    width: 50px ;
+    color: white;
+}
