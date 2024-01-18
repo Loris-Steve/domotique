@@ -26,11 +26,11 @@ client.loop_start()
 #topic name
 topic = "telemetry"
 cpt = 0
-time_sleep = 20
+time_sleep = 10
 try:
-    while cpt < 200:
+    while cpt < 100:
         if cpt > 60 and cpt < 62:
-            time_sleep = 40
+            time_sleep = 20
             
         time.sleep(time_sleep)
         cpt += 1
